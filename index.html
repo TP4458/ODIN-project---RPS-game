@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <input
+        type="button"
+        class="button"
+        value="ROCK"
+        id="rock"
+        onclick="round(this.value)"
+      />
+      <input
+        type="button"
+        class="button"
+        value="PAPER"
+        id="paper"
+        onclick="round(this.value)"
+      />
+      <input
+        type="button"
+        class="button"
+        value="SCISSORS"
+        id="scissors"
+        onclick="round(this.value)"
+      />
+    </form>
+
+    <br />
+    <br />
+
+    <div>
+      PC player rolled...:
+      <div id="rollDisplay"></div>
+    </div>
+
+    <div>
+      RESULT!:
+      <div id="result"></div>
+    </div>
+    <div>
+      <div id="playerScore"></div>
+      <div id="pcScore"></div>
+    </div>
+    <div>
+      <input type="button" value="Reset Score" id="reset" onclick="reset()" />
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
