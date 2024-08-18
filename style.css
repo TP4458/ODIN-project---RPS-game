@@ -1,0 +1,72 @@
+img {
+  width: 150px;
+  height: 150px;
+}
+
+body {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.iconWrapper {
+  display: flex;
+  justify-content: space-between;
+  /* flex-direction: row; */
+}
+
+.playerIcons {
+  display: flex;
+  flex-direction: column;
+  align-self: self-start;
+  float: left;
+  filter: invert(23%) sepia(100%) saturate(1862%) hue-rotate(196deg)
+    brightness(97%) contrast(103%);
+}
+
+.pcIcons {
+  display: flex;
+  flex-direction: column;
+  /* align-self: flex-end; */
+  float: inline-end;
+  filter: invert(11%) sepia(97%) saturate(4733%) hue-rotate(1deg)
+    brightness(93%) contrast(118%);
+}
+.container {
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+}
+.pcButton {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  opacity: 0.8;
+  transition: 0.3s;
+  margin: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.plButton {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  opacity: 0.8;
+  transition: 0.2s;
+  margin: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.plButton:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.plButton:active {
+  transform: scale(1.2);
+}
+.pcButton2:active {
+  transform: scale(1.2) translateY(2em);
+}

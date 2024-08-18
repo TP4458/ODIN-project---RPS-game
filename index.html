@@ -3,52 +3,77 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
-    <form>
-      <input
-        type="button"
-        class="button"
-        value="ROCK"
-        id="rock"
-        onclick="round(this.value)"
-      />
-      <input
-        type="button"
-        class="button"
-        value="PAPER"
-        id="paper"
-        onclick="round(this.value)"
-      />
-      <input
-        type="button"
-        class="button"
-        value="SCISSORS"
-        id="scissors"
-        onclick="round(this.value)"
-      />
-    </form>
+    <div class="container">
+      <div class="iconWrapper">
+        <!-- ICONS FOR HUMAN PLAYER -->
+        <div class="playerIcons">
+          <button
+            type="button"
+            class="plButton"
+            id="rock"
+            onclick="round(this.id)"
+          >
+            <img src="/rock-a-svgrepo-com.svg" />
+          </button>
+          <button
+            type="button"
+            class="plButton"
+            id="paper"
+            onclick="round(this.id)"
+          >
+            <img src="/piece-of-paper-svgrepo-com.svg" />
+          </button>
+          <button
+            type="button"
+            class="plButton"
+            id="scissors"
+            onclick="round(this.id)"
+          >
+            <img src="/scissors-svgrepo-com.svg" />
+          </button>
+        </div>
+        <!-- ICONS FOR PC PLAYER -->
+        <div class="pcIcons">
+          <div>
+            <img class="pcButton" id="pcRock" src="/rock-a-svgrepo-com.svg" />
+          </div>
+          <div>
+            <img
+              class="pcButton"
+              id="pcPaper"
+              src="/piece-of-paper-svgrepo-com.svg"
+            />
+          </div>
+          <div>
+            <img class="pcButton" id="pcScr" src="/scissors-svgrepo-com.svg" />
+          </div>
+        </div>
+      </div>
 
-    <br />
-    <br />
+      <div>
+        <div id="playerScore"></div>
+        <div id="pcScore"></div>
+      </div>
 
-    <div>
-      PC player rolled...:
-      <div id="rollDisplay"></div>
+      <div>
+        <input type="button" value="Reset Score" id="reset" onclick="reset()" />
+      </div>
+
+      <div>
+        RESULT!:
+        <p id="result"></p>
+      </div>
+
+      <div>
+        PC player rolled...:
+        <p id="rollDisplay"></p>
+      </div>
     </div>
 
-    <div>
-      RESULT!:
-      <div id="result"></div>
-    </div>
-    <div>
-      <div id="playerScore"></div>
-      <div id="pcScore"></div>
-    </div>
-    <div>
-      <input type="button" value="Reset Score" id="reset" onclick="reset()" />
-    </div>
     <script src="script.js"></script>
   </body>
 </html>
