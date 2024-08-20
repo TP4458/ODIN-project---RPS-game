@@ -5,6 +5,11 @@ let paperBtn = document.getElementById('paper');
 let scBtn = document.getElementById('scissors');
 let resetBtn = document.getElementById('reset');
 let gameRes = document.getElementById('result');
+let happyFace = document.createElement('img');
+let sadFace = document.createElement('img');
+
+happyFace.src = '/face-id-svgrepo-com.svg';
+sadFace.src = '/face-id-error-svgrepo-com.svg';
 
 let rndNo = 0;
 let playerScore = 0;
@@ -51,8 +56,10 @@ function round(e) {
 function scoreCheck(r) {
   if (r) {
     playerScore += 1;
+    document.getElementById('face').appendChild(happyFace);
   } else {
     pcScore += 1;
+    document.getElementById('face').appendChild(sadFace);
   }
   console.log('playerScore' + ' ' + playerScore);
   console.log('pcscore' + ' ' + pcScore);
